@@ -35,17 +35,20 @@ const ServicesAndContent = () => {
     {
       title: "Как справиться с тревогой: 5 практических методов",
       excerpt: "Тревога — естественная реакция на стресс. Узнайте простые техники, которые помогут вам вернуть контроль.",
-      date: "15 декабря 2024"
+      date: "15 декабря 2024",
+      image: "https://cdn.poehali.dev/files/d9647131d268c74cc797534260eb326c_93cbff8a-6f55-4005-98f9-2d370bf2b8bd.png"
     },
     {
       title: "Границы в отношениях: почему они важны",
       excerpt: "Здоровые границы — основа гармоничных отношений. Разбираемся, как их устанавливать и защищать.",
-      date: "10 декабря 2024"
+      date: "10 декабря 2024",
+      image: "https://cdn.poehali.dev/files/3e690dc2a927638aabfeddfbf4b9de00_589b2be0-df80-4662-8c3a-5a4389e1d0b4.png"
     },
     {
       title: "Работа с эмоциональным выгоранием",
       excerpt: "Признаки выгорания и способы восстановления внутренних ресурсов для возвращения энергии.",
-      date: "5 декабря 2024"
+      date: "5 декабря 2024",
+      image: "https://cdn.poehali.dev/files/0bbf51edaf550019c538bb98633a6279_d57e2113-36e4-41a6-a918-9ea8bbeacb81.png"
     }
   ];
 
@@ -138,7 +141,7 @@ const ServicesAndContent = () => {
                 <CardHeader>
                   <div className="w-full h-48 rounded-lg mb-4 overflow-hidden">
                     <img 
-                      src="https://cdn.poehali.dev/projects/65a381f5-f823-4df9-a3e8-85b366ddbd58/files/487ee45c-9be5-4374-b9ee-aefb05a6068a.jpg"
+                      src={post.image}
                       alt={post.title}
                       className="w-full h-full object-cover"
                     />
