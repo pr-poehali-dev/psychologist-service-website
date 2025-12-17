@@ -22,7 +22,7 @@ const BookingSection = () => {
     e.preventDefault();
     
     try {
-      const response = await fetch('https://functions.poehali.dev/f4bb6f66-d915-471a-9d6c-ac17ce027cbf', {
+      const response = await fetch('https://functions.poehali.dev/5b63dd14-5314-474a-9679-7bd500c1487b', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
