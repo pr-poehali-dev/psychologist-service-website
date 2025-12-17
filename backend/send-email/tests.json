@@ -1,0 +1,41 @@
+{
+  "tests": [
+    {
+      "name": "Valid booking request",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Иван Петров",
+        "email": "test@example.com",
+        "phone": "+7 (999) 123-45-67",
+        "message": "Хочу записаться на консультацию",
+        "date": "2024-12-20",
+        "time": "15:00"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Missing required fields",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Тест"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "OPTIONS preflight request",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    }
+  ]
+}

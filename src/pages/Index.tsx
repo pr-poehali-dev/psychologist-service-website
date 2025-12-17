@@ -20,13 +20,40 @@ const Index = () => {
     time: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Заявка отправлена!",
-      description: "Я свяжусь с вами в ближайшее время для подтверждения консультации.",
-    });
-    setFormData({ name: '', email: '', phone: '', message: '', date: '', time: '' });
+    
+    try {
+      const response = await fetch('https://functions.poehali.dev/f4bb6f66-d915-471a-9d6c-ac17ce027cbf', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      
+      const result = await response.json();
+      
+      if (response.ok) {
+        toast({
+          title: "Заявка отправлена!",
+          description: "Я свяжусь с вами в ближайшее время для подтверждения консультации.",
+        });
+        setFormData({ name: '', email: '', phone: '', message: '', date: '', time: '' });
+      } else {
+        toast({
+          title: "Ошибка отправки",
+          description: result.error || "Попробуйте позже или свяжитесь по телефону",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Ошибка отправки",
+        description: "Проверьте подключение к интернету",
+        variant: "destructive",
+      });
+    }
   };
 
   const services = [
