@@ -31,7 +31,7 @@ const HeroSection = () => {
             <div className="relative animate-scale-in">
               <div className="aspect-square rounded-3xl overflow-hidden">
                 <img 
-                  src="https://cdn.poehali.dev/projects/65a381f5-f823-4df9-a3e8-85b366ddbd58/files/53960d0d-b060-4317-91ae-745a700d0a7a.jpg" 
+                  src="https://cdn.poehali.dev/files/f08634c18b376b049cc7fda594f45a6b.png" 
                   alt="Гармония и внутренний покой"
                   className="w-full h-full object-cover"
                 />
