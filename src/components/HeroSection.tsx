@@ -47,7 +47,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden">
                 <img 
-                  src="https://cdn.poehali.dev/projects/65a381f5-f823-4df9-a3e8-85b366ddbd58/files/0234f22d-8faf-4c93-87ab-8435fac1724e.jpg" 
+                  src="https://cdn.poehali.dev/files/IMG_9116.JPG" 
                   alt="Профессиональный психолог"
                   className="w-full h-full object-cover"
                 />
