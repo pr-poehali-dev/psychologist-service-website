@@ -10,7 +10,6 @@ const Header = () => {
           <a href="#services" className="text-foreground hover:text-primary transition-colors">Услуги</a>
           <a href="#booking" className="text-foreground hover:text-primary transition-colors">Запись</a>
           <a href="#blog" className="text-foreground hover:text-primary transition-colors">Блог</a>
-          <a href="#contact" className="text-foreground hover:text-primary transition-colors">Контакты</a>
         </div>
         <Button>Записаться</Button>
       </nav>
